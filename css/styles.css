@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+ height: 100%;
+}
+
+#flewWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+#operBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  width: 33.33%;
+  height: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  height: 33%;
+}
