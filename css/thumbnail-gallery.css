@@ -8,8 +8,20 @@ body {
   padding-top: 54px;
 }
 
+#calcBody {
+  display: flex;
+
+}
+
+/* #operatorBody {
+  display: flex;
+  flex-direction: column;
+} */
+
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
   }
 }
+
+
