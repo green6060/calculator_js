@@ -1,4 +1,6 @@
 $(document).ready( function() {
+/**********************************************Variables**********************************************************/
+
   var num1String = ""
   var sign = ""
   var num2String = ""
@@ -8,36 +10,50 @@ $(document).ready( function() {
 
   var display = "";
 
+/**********************************************Functions**********************************************************/
+
   // refreshes the display variable (so as later in each clickEvent to refresh the #display contents as each
   // button is clicked)
   function refreshDisplay() {
-  // display = num1String + " " + sign + " " +  num2String
+    display = num1String + " " + sign + " " +  num2String
   }
 
   function add(num1, num2){
-
+    result = num1 + num;
     return result;
   }
 
   function subtract(num1, num2){
-
+    result = num1 - num;
     return result;
   }
 
   function multiply(num1, num2){
-
+    result = num1 * num;
     return result;
   }
 
   function devide(num1, num2){
-
+    result = num1 / num;
     return result;
   }
 
   function squared(num1, num2){
-
-    return result;
+    result = Math.sqrt(num1)
+    // set var display = var result
+    //
+    // replace contents of #display with contents of var display
+    //
+    // var num1String = ""
+    // var sign = ""
+    // var num2String = ""
+    // var num1 = nil;
+    // var num2 = nil;
+    // var result = nil; 
+    //
   }
+
+/**************************************************JQuery**********************************************************/
 
   // putting event listeners on each button
   $('#button_1').click(function() {
@@ -160,7 +176,7 @@ $(document).ready( function() {
     // replace contents of #display with contents of var display
   });
 
-  $('#devide').click(function() {
+  $('#divide').click(function() {
     // IF num1 is empty, generate error message telling user either to pick a number first,
     // or ELSE IF var sign is NOT empty, tell user to they can only pick one sign at a time
     // ELSE, concatonate the "/" symbol to the end of var sign
@@ -171,13 +187,11 @@ $(document).ready( function() {
   });
 
   $('#square_root').click(function() {
-    // IF num1 is empty, generate error message telling user either to pick a number first,
+    // IF num1 is empty, generate error message telling user to pick a number first,
     // or ELSE IF var sign is NOT empty, tell user to they can only pick one sign at a time
     // ELSE, concatonate the "&#8730;" symbol  code to the end of var sign
     //
-    // refreshDisplay()
-    //
-    // replace contents of #display with contents of var display
+    // ELSE set var display = squared(num1, num2)
   });
 
   $('#equals').click(function() {
@@ -188,7 +202,7 @@ $(document).ready( function() {
     // ELSE IF var sign == "-" set var display = subtract(num1, num2)
     // ELSE IF var sign == "x" set var display = multiply(num1, num2)
     // ELSE IF var sign == "/" set var display = divide(num1, num2)
-    // ELSE set var display = squared(num1, num2)
+    
     //
     // replace contents of #display with contents of var display
     //
